@@ -4,7 +4,7 @@
   "description": "Reveals text word-by-word, words letter-by-letter",
   "main": "lib/index.js",
   "scripts": {
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "yarn clean && yarn build",
     "build": "babel src --out-dir lib",
     "clean": "rm -rf dist/*"
   },
