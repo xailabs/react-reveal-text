@@ -1,0 +1,36 @@
+{
+  "name": "@xailabs/react-reveal-text",
+  "version": "1.0.0",
+  "description": "Reveals text word-by-word, words letter-by-letter",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "build": "babel src --out-dir lib",
+    "clean": "rm -rf dist/*"
+  },
+  "keywords": ["react", "text", "animation"],
+  "author": "Jovica Aleksic <jovica.aleksic@xailabs.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:xailabs/react-reveal-text.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=15",
+    "react-dom": ">=15"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0"
+  }
+}
