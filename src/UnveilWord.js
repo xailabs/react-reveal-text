@@ -8,6 +8,7 @@ export default class UnveilWord extends React.PureComponent {
         prepend: PropTypes.string.isRequired,
         append: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
+        maskText: PropTypes.bool,
         dir: PropTypes.oneOf([1, -1]),
         charPool: PropTypes.string,
         interval: PropTypes.number,
@@ -17,6 +18,7 @@ export default class UnveilWord extends React.PureComponent {
         dir: 1,
         prepend: '',
         append: '',
+        maskText: true,
         charPool: '#$!%&?~*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
         component: 'span',
         interval: 40
@@ -29,7 +31,7 @@ export default class UnveilWord extends React.PureComponent {
     constructor(props, context) {
         super(props, context);
         this.showNextLetter = this.showNextLetter.bind(this);
-        const maskedText = this.getRandomString(props.text.length, props.charPool);
+        const maskedText = props.maskText ? this.getRandomString(props.text.length, props.charPool) : '';
         this.state = {
             ...this.state,
             maskedText: maskedText,

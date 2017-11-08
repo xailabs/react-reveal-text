@@ -8,11 +8,13 @@ export default class UnveilText extends React.PureComponent {
     static propTypes = {
         className: PropTypes.string,
         text: PropTypes.string.isRequired,
+        maskText: PropTypes.bool,
         wordInterval: PropTypes.number,
         letterInterval: PropTypes.number
     };
 
     static defaultProps = {
+        maskText: true,
         wordInterval: 30
     };
 
@@ -42,12 +44,13 @@ export default class UnveilText extends React.PureComponent {
     }
 
     render() {
+        const { maskText } = this.props;
         return (
             <div className={cx(this.props.className, 'UnveilText')}>
                 {this.state.words
                     .slice(0, this.state.progress)
                     .map(({ word, id }) => (
-                        <UnveilWord key={id} interval={this.props.letterInterval} text={word} append={' '} />
+                        <UnveilWord key={id} interval={this.props.letterInterval} text={word} append={' '} maskText={maskText} />
                     ))}
             </div>
         );

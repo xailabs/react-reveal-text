@@ -1,6 +1,6 @@
 {
   "name": "@xailabs/react-reveal-text",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Reveals text word-by-word, words letter-by-letter",
   "main": "lib/index.js",
   "scripts": {
